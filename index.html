@@ -10,6 +10,7 @@
                 <button onclick="change_start()">Change Start Cell</button>
                 <button onclick="change_end()">Change Destination Cell</button>
                 <button onclick="clear_board()">Clear Board</button>
+                <button onclick="bfs()">Run Algorithm</button>
             </div>
             <div class="board"
                 @mousedown="mouse_down"
@@ -18,7 +19,7 @@
                 <div 
                     v-for="cell in cells"
                     class="cell"
-                    :class="{start_cell: cell.is_start, end_cell: cell.is_end, wall_cell: cell.is_wall}"
+                    :class="{start_cell: cell.is_start, end_cell: cell.is_end, wall_cell: cell.is_wall, visited_cell: cell.is_visited, solution_cell: cell.is_in_solution}"
                     @click="clicked_cell(cell)"
                     @mouseover="mouse_over(cell)"
                 >

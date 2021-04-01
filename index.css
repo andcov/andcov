@@ -57,3 +57,11 @@ html, body {
 .board .wall_cell {
   background-color:lightseagreen !important; 
 }
+
+.board .visited_cell {
+  background-color: darkblue;
+}
+
+.board .solution_cell {
+  background-color: rgb(232, 186, 37);
+}
