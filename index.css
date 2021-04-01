@@ -1,4 +1,10 @@
+html, body {
+  height: calc(100% - 20px);
+  margin: 10px 10px;
+}
+
 .application {
+  height: 100%;
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
@@ -6,8 +12,9 @@
 
 .options {
   background-color: #C4C4C4;
-  min-width: 20%;
-  min-height: 100%;
+  width: 300px;
+  height: 100%;
+  margin-right: 15px;
   border-radius: 40px;
   display: flex;
   justify-content: center;
@@ -22,23 +29,23 @@
 
 .board .cell {
   flex: 0 0 0;
-  max-height: 30px;
-  min-height: 30px;
-  max-width: 30px;
-  min-width: 30px;
-  border-radius: 5px;
+  max-height: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  min-width: 40px;
+  border-radius: 10px;
   background-color: lightblue;
-  margin: 10px 10px;
+  margin: 5px 5px;
 }
 
-.start_cell {
+.board .start_cell {
   background-color:lightgreen !important; 
 }
 
-.end_cell {
+.board .end_cell {
   background-color:lightcoral !important; 
 }
 
-.wall_cell {
+.board .wall_cell {
   background-color:lightseagreen !important; 
 }

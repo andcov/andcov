@@ -7,7 +7,7 @@
     <body>
         <div class="application">
             <div class="options">
-                <button onclick="reset_board()">Reset Board</button>
+                <button onclick="clear_board()">Clear Board</button>
             </div>
             <div class="board"
                 @mousedown="mouse_down"
@@ -17,8 +17,7 @@
                     v-for="cell in cells"
                     class="cell"
                     :class="{start_cell: cell.is_start, end_cell: cell.is_end, wall_cell: cell.is_wall}"
-                    @click="cell.is_wall = !cell.is_wall"
-                    
+                    @click="clicked_cell(cell)"
                     @mouseover="mouse_over(cell)"
                 >
                 </div>

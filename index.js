@@ -1,8 +1,12 @@
 function create_cells() {
-  const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-  const height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+  var board_dim = document.getElementsByClassName("board")[0].getBoundingClientRect();
 
-  const cell_cnt = Math.floor(height / 50) * Math.floor(width * 8 / 10 / 50);
+  // const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  // const height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+  const width = board_dim.width;
+  const height = board_dim.height;
+
+  const cell_cnt = Math.floor(height / 50) * Math.floor(width / 50);
   console.log(`H: ${height} W: ${width}`);
   console.log(cell_cnt);
 
@@ -19,7 +23,7 @@ function create_cells() {
   return cells;
 }
 
-function reset_board() {
+function clear_board() {
   for (let i = 0; i < cells.length; i++) {
     cells[i].is_wall = false;
   }
@@ -29,7 +33,7 @@ function reset_board() {
 let cells = create_cells();
 
 cells[1].is_start = true;
-cells[2].is_end = true;
+cells[3].is_end = true;
 
 var container = new Vue({
   el: '.board',
@@ -38,16 +42,21 @@ var container = new Vue({
     is_placing_walls: false,
   },
   methods: {
-    mouse_over: function(cell){
-      if(this.is_placing_walls) {
+    mouse_over: function(cell) {
+      if(this.is_placing_walls && !cell.is_start && !cell.is_end) {
         cell.is_wall = !cell.is_wall;
       }
     },
-    mouse_down: function(){
+    clicked_cell: function(cell) {
+      if(!cell.is_start && !cell.is_end) {
+        cell.is_wall = !cell.is_wall;
+      }
+    },
+    mouse_down: function() {
       this.is_placing_walls = true;   
     },
-    mouse_up: function(){
+    mouse_up: function() {
       this.is_placing_walls = false;   
-    }
+    },
   }
 });
