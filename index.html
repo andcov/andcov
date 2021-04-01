@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div class="application">
+            <div class="options">
+                
+            </div>
+            <div class="board">
+                <cell
+                    v-for="cell in cells"
+                    v-bind:key="cell.id"
+                    v-bind:is_start="cell.is_start"
+                    v-bind:is_end="cell.is_end"
+                    v-bind:is_wall="cell.is_wall"
+                ></cell>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
