@@ -1,3 +1,3 @@
 - 👋 Hi, I’m @andcov
 - 👀 I’m interested in computer science, physics, linguistics and many other subjects
-- 🌱 I’m currently learning data science
+- 🌱 I’m currently learning about data science
