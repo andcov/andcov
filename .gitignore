@@ -8,3 +8,5 @@
 .sass-cache/
 .jekyll-metadata
 vendor
+
+*/.DS_Store
