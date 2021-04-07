@@ -105,5 +105,6 @@ if (window.localStorage && localStorage['currentTheme']) {
   var iconClasses = iconForTheme(localStorage['currentTheme']);
   el.className = iconClasses;
 } else {
+  updateTheme(LightTheme);
   el.className = iconForTheme();
 }
