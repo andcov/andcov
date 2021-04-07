@@ -16,7 +16,7 @@ Hello!
 This is my blog.
 <!–-break-–>
 
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+> Checkout my [project](https://algovis.andcov.dev/)
 
 Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
 {: .notice}
