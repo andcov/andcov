@@ -37,6 +37,16 @@
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <meta property="og:site_name" content="{{ site.blog.title }}">
 
+<!-- MathJax -->
+{% if site.blog.math %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+<!-- Clicky Tracking -->
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101310307);</script>
+<script async src="//static.getclicky.com/js"></script>
+
 <!-- Styles -->
 <link rel="stylesheet" href="{{ "assets/vendor/normalize-css/normalize.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
