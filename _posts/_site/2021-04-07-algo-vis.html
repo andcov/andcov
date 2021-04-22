@@ -1,0 +1,17 @@
+<p>After finishing <a href="https://www.coursera.org/specializations/algorithms?ranMID=40328&amp;ranEAID=TnL5HPStwNw&amp;ranSiteID=TnL5HPStwNw-iw85ccUCuirYN6zfrgqgAw&amp;siteID=TnL5HPStwNw-iw85ccUCuirYN6zfrgqgAw&amp;utm_content=10&amp;utm_medium=partners&amp;utm_source=linkshare&amp;utm_campaign=TnL5HPStwNw">this <strong>Algorithms Course</strong></a>, and I decided it would be cool to put some of my newly acquired skills to the test, while also learning about web development, so I created <a href="https://algovis.andcov.dev">Algorithm Visualiser</a>. It is an interactive site where you can, as the name implies, see how some algorithms work.
+&lt;!–-break-–&gt;</p>
+
+<p><img src="/uploads/algo_vis_scsh.png" alt="" /></p>
+
+<p>The interface is made up of a board (this is where the action happens) and some options (on the left). To run an algorithm, just hover over the <code class="language-plaintext highlighter-rouge">Algorithms</code> tab and pick one. The astute among you might figure out that running BFS ten times on the same, empty board yields the same path, so let’s modify the board! A cell can have four values:</p>
+<ul>
+  <li>the green, start cell (the algorithm starts here)</li>
+  <li>the red, destination cell (the algorithm tries to reach this cell)</li>
+  <li>empty (nothing to see here)</li>
+  <li>wall (a path cannot go through a wall)</li>
+  <li>light (algorithms that take weights into consideration will prefer these cells to empty or heavy ones)</li>
+  <li>heavy (algorithms that take weights into consideration will try light or empty cells before checking these)</li>
+</ul>
+
+<p>By default, all the cells are empty. To add walls, click a cell or drag over the board. Cells should turn darker. To add light cells, while pressing <code class="language-plaintext highlighter-rouge">L</code>, click a cell and an feather icon should appear. Similarly for heavy ones, but you should press <code class="language-plaintext highlighter-rouge">H</code>. The start and destination cell can be changed using the buttons on the left.</p>
+

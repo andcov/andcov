@@ -7,11 +7,11 @@ url                          : "" # the base hostname & protocol for your site
 blog:
   title                      : "andcov"
   description                  : >
-                                Made with ❤ by Andre Covaci.
+                                Made with ❤ by andcov.
 
 # Layout configuration
   logo_path                  : "assets/img/terminal.svg" # path to logo file
-  search_path                : "andcov.github.io"
+  search_path                : "andcov.dev"
                                # needed for searchbox in archive page
   hero_layout                : true # turn on hero layout for blog and posts
   hero_placeholder           : "assets/img/generic_hero.jpg" # placeholder for hero image
@@ -27,7 +27,7 @@ blog:
 
 # Author info
 author:
-  fullname                  : Andrei Covaci
+  fullname                  : 
   rss                       : true # generate RSS feed and show it's icon in header
   mail                      : andreicovaci123@gmail.com # change to your e-mail address
   twitter                   : 
@@ -35,7 +35,7 @@ author:
   youtube                   :
   stackoverflow             :
   disqus                    :
-  google_analytics          : 'xx-xxxxxxxxx-x'
+  google_analytics          : # 'xx-xxxxxxxxx-x'
   photo                     : "uploads/me2.png"
   photo2x                   : "uploads/me.png"
 
